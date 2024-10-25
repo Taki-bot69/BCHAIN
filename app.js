@@ -642,7 +642,7 @@ const abi =[
 	}
 ];
 
-const contractAddress = '0xb176f1d61dea5a123b23c7f6710d1e76dcfc1902'; 
+const contractAddress = '0xaf0d55f9e1df626fca223fdbabf1778643a76e75'; 
 
 let web3;
 let contract;
