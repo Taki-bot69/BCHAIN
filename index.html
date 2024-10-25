@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALICE Voting Interface</title>
+    <meta name="description" content="SubZania Voting DApp - A secure and transparent blockchain-based voting system."> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"><!--Fonts-->
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.7.3/dist/web3.min.js"></script><!--web3.jc lib-->
+</head> 
+<body>
+
+    <header>
+        <h1>SubZania  Voting DApp</h1>
+        <p>Autonomous Ledger-Based Immutable Consensus Ecosystem</p>
+        <p>Blockchain Voting System</p>
+        <p id="stat1">Ensure transparency and security in voting with blockchain technology.</p>
+        <button onclick="ac1()" class="button" id="connect" aria-label="Connect Metamask Wallet">Connect Metamask Wallet</button>
+        <p id="acc1">Not connected</p>
+    </header>
+
+    <nav>
+        <!-- Navigation links can be added here if necessary -->
+    </nav>
+
+    <main>
+        <section class="intro">
+            <h2>Welcome to the SubZania  Voting DApp</h2>
+            <p>The SubZania  Voting DApp revolutionizes the electoral process by utilizing blockchain technology to ensure secure, transparent, and tamper-proof voting. Each vote is recorded on the blockchain, providing an immutable record that enhances trust in the electoral system.</p>
+            <p>By connecting your Metamask wallet, you can participate in this groundbreaking voting process, contributing to a more democratic and accountable society.</p>
+        </section>
+
+        <section class="container">
+            <!-- Candidate Card 1 -->
+            <div class="card">
+                <img src="img/9.png" alt="Phil MacCraken, candidate for President" />
+                <div class="name">Kween Yasmin</div>
+                <div class="position">Running for President</div>
+                <div class="description">
+                    Kween Yasmin is a visionary leader with a track record in public service, promising innovative policies for a better tomorrow. His commitment to community engagement and sustainable development makes him a strong candidate for leadership.
+                </div>
+                <button class="button" onclick="voteForCandidate(0)" aria-label="Vote for Phil MacCraken">Vote</button>
+            </div>
+
+            <!-- Candidate Card 2 -->
+            <div class="card">
+                <img src="img/2.jpg" alt="Kent C Strait, candidate for President" />
+                <div class="name">Kencee Strait</div>
+                <div class="position">Running for President</div>
+                <div class="description">
+                    Kencee Strait focuses on economic growth and social reforms, advocating for a strong, sustainable future. His plans to enhance education and job opportunities are pivotal for national progress.
+                </div>
+                <button class="button" onclick="voteForCandidate(1)" aria-label="Vote for Kent C Strait">Vote</button>
+            </div>
+
+            <!-- Candidate Card 3 -->
+            <div class="card">
+                <img src="img/3.jpg" alt="Mike Rotch, candidate for President" />
+                <div class="name">Chris Mastree</div>
+                <div class="position">Running for President</div>
+                <div class="description">
+                    Chris Mastree, with decades of leadership experience, aims to restore integrity and build resilient institutions. His emphasis on transparency and accountability resonates with voters seeking change.
+                </div>
+                <button class="button" onclick="voteForCandidate(2)" aria-label="Vote for Mike Rotch">Vote</button>
+            </div>
+
+            <!-- Candidate Card 4 (Vice President) -->
+            <div class="card2">
+                <img src="img/4.png" alt="Amy Stake, candidate for Vice President" />
+                <div class="name">Lou Lawrence</div>
+                <div class="position">Running for Vice President</div>
+                <div class="description">
+                    Lou Lawrence is dedicated to ensuring equal opportunities for all, with a focus on community and education. Her policies are aimed at fostering inclusion and empowering marginalized voices.
+                </div>
+                <button class="button" onclick="voteForSenator(0)" aria-label="Vote for Amy Stake">Vote</button>
+            </div>
+
+            <!-- Candidate Card 5 (Vice President) -->
+            <div class="card2">
+                <img src="img/5.png" alt="Hugh Jass, candidate for Vice President" />
+                <div class="name">Idol Wistler</div>
+                <div class="position">Running for Vice President</div>
+                <div class="description">
+                    Idol Wistler champions social justice and environmental sustainability, advocating for the next generation. His commitment to green policies and community welfare sets him apart.
+                </div>
+                <button class="button" onclick="voteForSenator(1)" aria-label="Vote for Hugh Jass">Vote</button>
+            </div>
+
+            <!-- Candidate Card 6 (Vice President) -->
+            <div class="card2">
+                <img src="img/6.jpg" alt="Jack Hoff, candidate for Vice President" />
+                <div class="name">Dic Raider</div>
+                <div class="position">Running for Vice President</div>
+                <div class="description">
+                    Dic Raider focuses on healthcare and welfare reform, ensuring access to services for every citizen. His comprehensive approach to public health is essential in today's landscape.
+                </div>
+                <button class="button" onclick="voteForSenator(2)" aria-label="Vote for Dic Raider">Vote</button>
+            </div>
+
+             <!-- Candidate Card 7 (Secretary) -->
+             <div class="card3">
+                <img src="img/7.png" alt="Lou Lawrence, candidate for Secretary" />
+                <div class="name">Lou Lawrence</div>
+                <div class="position">Running for Secretary</div>
+                <div class="description">
+                    Lou Lawrence  will focus on streamlining communication and organization, ensuring that every meeting runs efficiently and that vital information is easily accessible. My proactive approach to documentation and coordination is crucial for the team's success.
+                </div>
+                <button class="button" onclick="voteForOfficer(0)" aria-label="Vote for Lou Lawrence">Vote</button>
+            </div>
+
+            <!-- Candidate Card 8 (Secretary) -->
+            <div class="card3">
+                <img src="img/8.png" alt="Hugh Jass, candidate for Secretary" />
+                <div class="name">Amy Stake</div>
+                <div class="position">Running for Secretary</div>
+                <div class="description">
+                    Amy Stake will prioritize clear and timely communication, ensuring that everyone stays informed and aligned with our goals. My meticulous attention to detail and commitment to record-keeping will create a solid foundation for transparent and organized operations.
+                </div>
+                <button class="button" onclick="voteForOfficer(1)" aria-label="Vote for Hugh Jass">Vote</button>
+            </div>
+
+            <!-- Candidate Card 9 (Secretary) -->
+            <div class="card3">
+                <img src="img/1.png" alt="Dic Raider, candidate for Secretary" />
+                <div class="name">Arnold Schwarzinegger</div>
+                <div class="position">Running for Secretary</div>
+                <div class="description">
+                    Arnold Schwarzinegger focuses on improving organizational efficiency, ensuring that all minutes, schedules, and reports are accurate and readily available. My dedication to keeping things structured and accessible is vital to fostering a well-coordinated team environment.
+                </div>
+                <button class="button" onclick="voteForOfficer(2)" aria-label="Vote for Dic Raider">Vote</button>
+            </div>
+        </section>
+    </main>
+
+    <section class="intro">
+        <h2>Voting Results</h2>
+        <p>The SubZania  Voting DApp revolutionizes the electoral process by utilizing blockchain technology to ensure secure, transparent, and tamper-proof voting. Each vote is recorded on the blockchain, providing an immutable record that enhances trust in the electoral system.</p>
+        <br>
+        <button onclick="checkIfVoted()" class="button">Check Vote</button>
+        
+    </section>
+
+    <footer>
+        <p><small>&copy; 2024 SubZania  Blockchain Voting. All Rights Reserved.</small></p>
+        <p>Powered by decentralized blockchain technology for transparent and secure voting.</p>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
+
+
